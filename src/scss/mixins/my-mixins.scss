@@ -1,0 +1,62 @@
+@mixin text-hide {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin list-decorated {
+  padding-left: 50px;
+  position: relative;
+  list-style-type: none;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-2px);
+    left: 0;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+@mixin img-sharp {
+  image-rendering: pixelated;
+   image-rendering: -moz-crisp-edges; /* Firefox */
+   -ms-interpolation-mode: nearest-neighbor; /* IE */
+}
+
+@mixin container {
+  display: block;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: none;
+
+  @media (min-width: $screen-md) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (min-width: $screen-xl) {
+    $padding-min: 25px; // нужный отступ от краев экрана
+    $half-screen-xl: $screen-xl / 2 - $padding-min;
+    // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
+    padding-left: calc(50% - #{$half-screen-xl});
+    padding-right: calc(50% - #{$half-screen-xl});
+  }
+}
+
+@mixin object-fit($fit: cover) {
+  object-fit: $fit;
+  object-position: center;
+}

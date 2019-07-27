@@ -1,0 +1,184 @@
+.services {
+  margin-bottom: 50px;
+  border-bottom: 1px solid $border-color;
+
+  $block-name:                &; // #{$block-name}__element
+
+  & .tabs {
+
+    &__links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;
+    }
+
+    &__link-wrap {
+      width: 100%;
+      padding: 0 20px;
+      border: none;
+
+      @media (min-width: $screen-xl) {
+        padding: 0 40px;
+      }
+
+      //&:not(:first-child) {
+
+      .tabs__link {
+
+        @media (min-width: $screen-md) {
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      }
+      //}
+
+      &--active {
+        background-color: $white;
+      }
+    }
+
+    &__link {
+      padding: 5px 0;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      color: $title-color;
+      background: none;
+
+      @media (min-width: $screen-md) {
+        position: relative;
+        padding: 10px 0;
+        font-size: 24px;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &__content-wrapper {
+      padding: 20px 0 40px;
+      border: none;
+    }
+
+    &__content-item {
+
+      &--active {
+
+      }
+    }
+  }
+
+  .dropdown {
+
+    @media (min-width: $screen-md) {
+      padding: 20px 0;
+      background-color: $main-color;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 30px 0 40px;
+    }
+  }
+
+  .dropdown-toggle {
+    width: 100%;
+    color: $title-color;
+    background-color: $main-color;
+    border-color: currentColor;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      position: static;
+      float: none;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+  }
+
+  &__col-left {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+    padding: 20px 15px;
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      background: none;
+    }
+  }
+
+  &__col-right {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col-offset(xl, 1);
+  }
+
+  &__dropdown-wrapper {
+
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      position: static;
+      overflow: none;
+      clip: none;
+      height: auto;
+      width: auto;
+      margin-bottom: 15px;
+      padding: 0 20px;
+      border: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 0 40px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 50px;
+    }
+
+    img {
+      @include object-fit();
+    }
+  }
+
+  &__list {
+    padding-left: 25px;
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 18px;
+    font-weight: 700;
+    color: $second-color;
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 15px;
+      height: 2px;
+      margin-right: 10px;
+      background-color: $second-color;
+    }
+  }
+}

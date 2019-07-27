@@ -1,0 +1,53 @@
+.intro {
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-left {
+    @include col(xs, 12);
+    @include col(md, 6);
+  }
+
+  &__col-right {
+    @include col(xs, 12);
+    @include col(md, 6);
+  }
+
+  &__title {
+    color: $second-color;
+
+    & > span {
+      display: block;
+      color: $title-color;
+    }
+  }
+
+  &__img {
+
+    img {
+      @include object-fit();
+    }
+  }
+
+  &__about {
+    margin-top: 40px;
+
+    @media (min-width: $screen-md) {
+      columns: 2 auto;
+      column-gap: 25px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 50px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.contacts {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-left {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+
+  &__col-right {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col-offset(xl, 1);
+  }
+
+  &__links {
+
+  }
+
+  &__img {
+
+  }
+
+  &__list {
+
+  }
+
+  &__list-inner {
+
+  }
+
+  &__name {
+
+  }
+
+  &__value {
+
+  }
+
+  &__link {
+
+  }
+
+  &__form-wrapper {
+
+  }
+
+  &__form {
+
+  }
+
+  &__form-group {
+
+  }
+}

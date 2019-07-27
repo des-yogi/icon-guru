@@ -1,0 +1,36 @@
+.page-footer {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__copyrights-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 5);
+  }
+
+  &__nav-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 7);
+  }
+
+  &__copyrights {
+
+  }
+
+  &__nav {
+
+  }
+
+  &__nav-list {
+
+  }
+
+  &__nav-item {
+
+  }
+
+  &__nav-link {
+
+  }
+}
