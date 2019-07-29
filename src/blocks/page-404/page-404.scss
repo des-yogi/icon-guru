@@ -1,0 +1,38 @@
+.page-404 {
+  @include col(xs, 12);
+  @include col-offset(md, 3);
+  @include col(md, 6);
+  text-align: center;
+
+  $block-name:                &; // #{$block-name}__element
+
+  .btn {
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+    }
+
+    @media (min-width: $screen-lg) {
+      max-width: 395px;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: calc(9.375rem + ((1vw - 3.2px) * 5.2083));
+    color: $main-color;
+
+    @media (min-width: $screen-md) {
+      font-size: 200px;
+    }
+  }
+
+  &__descr {
+    font-weight: 700;
+
+    span {
+      display: block;
+      color: $main-color;
+    }
+  }
+}

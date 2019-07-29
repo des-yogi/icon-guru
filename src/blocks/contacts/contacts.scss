@@ -19,38 +19,140 @@
   }
 
   &__img {
+    margin-bottom: 20px;
 
+    @media (min-width: $screen-md) {
+      margin-bottom: 25px;
+    }
+
+    img {
+      @include object-fit();
+    }
   }
 
   &__list {
-
+    font-size: 18px;
+    font-weight: 700;
   }
 
   &__list-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-bottom: 20px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 25px;
+    }
   }
 
   &__name {
-
+    margin-right: 10px;
   }
 
   &__value {
-
+    flex: 1 1;
+    margin-left: 0;
+    color: $second-color;
   }
 
   &__link {
+    color: inherit;
 
+    span {
+      display: none;
+
+      @media (min-width: $screen-xl) {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+    }
   }
 
   &__form-wrapper {
 
   }
 
-  &__form {
+  &__title {
+    margin-top: 25px;
+    margin-bottom: 0;
 
+    @media (min-width: $screen-md) {
+      margin: 0;
+    }
+  }
+
+  &__form {
+    margin-top: 25px;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: flex-start;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 40px;
+    }
   }
 
   &__form-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 5px;
+    }
+
+    & > * {
+      width: 100%;
+    }
+
+    &--radio-wrapper {
+      margin-bottom: 25px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 25px;
+      }
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: baseline;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 392px;
+        margin-right: 25px;
+        margin-bottom: 0;
+      }
+    }
+
+    &--half-width {
+
+      @media (min-width: $screen-xl) {
+        width: calc(50% - 12.5px);
+      }
+    }
+
+    &--btn-wrapper {
+
+      @media (min-width: $screen-xl) {
+        max-width: 185px;
+      }
+    }
   }
 }

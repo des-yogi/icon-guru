@@ -25,7 +25,8 @@
     "typo": [],
     "intro": [],
     "services": [],
-    "contacts": []
+    "contacts": [],
+    "page-404": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

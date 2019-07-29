@@ -2,7 +2,10 @@
   margin-bottom: 40px;
 
   @media (min-width: $screen-md) {
+    padding-bottom: 50px;
     margin-top: 40px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid $border-color;
   }
 
   @media (min-width: $screen-xl) {
@@ -15,15 +18,33 @@
   &__col-left {
     @include col(xs, 12);
     @include col(md, 6);
+    @include col(xl, 5);
   }
 
   &__col-right {
     @include col(xs, 12);
     @include col(md, 6);
+    @include col(xl, 6);
+  }
+
+  &__col-about-left {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+
+  &__col-about-right {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col-offset(xl, 1);
   }
 
   &__title {
     color: $second-color;
+
+    @media (min-width: $screen-md) {
+      margin-top: 25px;
+    }
 
     & > span {
       display: block;
@@ -40,11 +61,6 @@
 
   &__about {
     margin-top: 40px;
-
-    @media (min-width: $screen-md) {
-      columns: 2 auto;
-      column-gap: 25px;
-    }
 
     @media (min-width: $screen-xl) {
       margin-top: 50px;
