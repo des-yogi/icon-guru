@@ -466,9 +466,27 @@ a.btn--disabled {
     -webkit-box-shadow: 0 0 0 2px rgba(255, 227, 50, 0.7);
             box-shadow: 0 0 0 2px rgba(255, 227, 50, 0.7); }
 .form__select {
-  color: #b0b5bb; }
+  position: relative;
+  z-index: 0;
+  color: #b0b5bb;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5' viewBox='0 0 10 5' fill='currentColor'%3E%3Cpath d='M0 0h10L5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 10px 5px; }
 .form__select:hover, .form__select:focus {
-    color: #65697c; }
+    color: #65697c;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5' viewBox='0 0 10 5' fill='%230ab9ff'%3E%3Cpath d='M0 0h10L5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 10px 5px; }
+.form__select:focus, .form__select:active {
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5' viewBox='0 0 10 5' fill='%230ab9ff'%3E%3Cpath d='M10 5H0l5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 10px 5px; }
 .form__label-title {
   display: block;
   font-size: 20px;
@@ -1432,11 +1450,7 @@ pre code {
     -o-object-position: center;
        object-position: center; }
 .intro__about {
-    margin-top: 40px;
-    /* @media (min-width: $screen-md) {
-      columns: 2 auto;
-      column-gap: 25px;
-    } */ }
+    margin-top: 40px; }
 .services {
   margin-bottom: 50px;
   border-bottom: 1px solid #e9eaec; }
@@ -1469,7 +1483,8 @@ pre code {
                 transform: translateY(-50%);
         width: 5px;
         height: 10px;
-        background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='10' viewBox='0 0 5 10' fill='currentColor'%3E%3Cpath d='M0 10V0l5 5z'/%3E%3C/svg%3E"); }
+        background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='10' viewBox='0 0 5 10' fill='currentColor'%3E%3Cpath d='M0 10V0l5 5z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat; }
 .services .tabs__link-wrap--active {
       background-color: white; }
 .services .tabs__link {
