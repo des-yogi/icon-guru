@@ -7,9 +7,24 @@
   display: flex;
   align-items: center;
   width: 30px;
-  height: 22px;
+  height: 24px;
   user-select: none;
   cursor: pointer;
+
+  &::after {
+    display: block;
+    content: attr(data-caption);
+    position: absolute;
+    left: calc(100% + 15px);
+    top: 50%;
+    min-width: 47px;
+    min-height: 21px;
+    transform: translateY(-27%);
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    color: $second-color;
+  }
 
   > span {
     display: inline-block;
@@ -32,19 +47,20 @@
     }
 
     &:before {
-      top: -9px;
+      top: -10px;
     }
 
     &:after {
-      top: 9px;
+      top: 10px;
     }
   }
 
-  &:focus {
-    outline: none;
-  }
+  // &:focus {
+  //   outline: none;
+  // }
 
   &--close {
+    height: 30px;
 
     > span {
       transition: background $transition-time 0s;
@@ -52,6 +68,7 @@
 
       &:before,
       &:after {
+        background: $main-color;
         transition: top $transition-time, transform $transition-time $transition-time;
         top: 0;
       }

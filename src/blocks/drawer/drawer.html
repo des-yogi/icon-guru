@@ -1,0 +1,58 @@
+<!--DEV
+@ @include('blocks/drawer/drawer.html')
+
+<a href="#" data-drawer-trigger="" aria-controls="drawer-menu" aria-expanded="false" class="btn">Open Drawer</a>
+
+-->
+
+<section class="drawer  drawer--left" id="main-nav" data-drawer-target>
+  <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+  <div class="drawer__wrapper">
+    <div class="drawer__header">
+      <h2 class="visually-hidden">Основная навигация сайта</h2>
+      <button class="drawer__close" data-drawer-close="" aria-label="Закрыть Drawer"></button><span class="drawer__caption">Menu</span>
+    </div>
+
+    <div class="drawer__content">
+
+      <nav class="main-nav">
+
+        <ol class="main-nav__list  list-nostyled">
+          <li class="main-nav__item  main-nav__item--active">
+            <a href="index.html" class="main-nav__link">
+              Home
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="service.html" class="main-nav__link">
+               Services
+            </a>
+            <ol class="main-nav__list  main-nav__list--lvl2  list-nostyled">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Air Conditioning & Heating</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Handyman</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Maid & Cleaning</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Mason, Brick, Pavers and Concrete</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Swimming Pool Repair and Construction</a>
+              </li>
+            </ol>
+          </li>
+          <li class="main-nav__item">
+            <a href="contacts.html" class="main-nav__link">
+              Contact Us
+            </a>
+          </li>
+        </ol>
+      </nav>
+
+    </div>
+  </div>
+</section>

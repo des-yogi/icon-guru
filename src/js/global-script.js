@@ -10,6 +10,14 @@ if(~navigator.appVersion.indexOf("Win"))cth('windows');
 if(~navigator.appVersion.indexOf("Mac"))cth('osx');
 if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
+const ready = function (fn) {
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
 $( document ).ready(function() {
   // code
   $('.dropdown-toggle').dropdown({
