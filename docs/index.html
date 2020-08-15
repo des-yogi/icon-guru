@@ -3,7 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>IPS Guru</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <meta name="MobileOptimized" content="320">  <meta name="format-detection" content="telephone=no">  <meta name="format-detection" content="date=no">  <meta name="format-detection" content="address=no">  <meta name="format-detection" content="email=no">  <meta name="description" content>  <meta name="keywords" content>  <meta name="robots" content="index,follow">  <!-- OpenGraph microdata  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />  <meta property="og:type"          content="website" />  <meta property="og:title"         content="Your Website Title" />  <meta property="og:description"   content="Your description" />  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />  <meta property="og:locale"        content="uk_UA" />  -->  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Picture element HTML5 shiv    document.createElement("picture");  </script>  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="MobileOptimized" content="320">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="description" content>
+  <meta name="keywords" content>
+  <meta name="robots" content="index,follow">
+  <!-- OpenGraph microdata
+  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+  <meta property="og:locale"        content="uk_UA" />
+  -->
+  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->
+  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/site.webmanifest">
@@ -35,13 +61,16 @@
         </div>
         <div class="page-header__content">
           <div class="page-header__controls">
+            <button id="main-nav-toggler" class="main-nav__toggler  burger" data-caption="Menu" data-drawer-trigger aria-controls="main-nav" aria-expanded="false"><span></span></button>
             <a href="index.html" class="logo" title="IPS Guru">
-              <svg width="57" height="30" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ips-logo"/></svg>
+              <picture>
+                <source srcset="img/ips-logo--mob.png" media="(min-width: 1280px)">
+                <img src="img/ips-logo--mob.png" alt="Логотип" width="177" height="71">
+              </picture>
             </a>
-            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+            <a href="tel:+18884266838" class="btn  page-header__call">Call Us</a>
           </div>
-          <a href="tel:+18884266838" class="btn  page-header__call">Call Us</a>
-          <nav id="main-nav" class="main-nav">
+          <!-- <nav id="main-nav" class="main-nav">
             <ol class="main-nav__list  list-nostyled">
               <li class="main-nav__item  main-nav__item--active">
                 <a href="index.html" class="main-nav__link">
@@ -59,7 +88,7 @@
                 </a>
               </li>
             </ol>
-          </nav>
+          </nav> -->
         </div>
       </header>
       <main class="main-content" role="main">
@@ -70,21 +99,24 @@
                 <h1 class="intro__title">Manage your home <span class="h3">and all your properties with one company — nationwide!</span></h1>
               </div>
               <div class="intro__col-right">
-                <div class="embed-responsive  embed-responsive--2-1  intro__img">
-                  <picture>
-                    <source srcset="img/intro-img.webp" media="(min-width: 992px)" type="image/webp">
-                    <source srcset="img/intro-img.jpg" media="(min-width: 992px)">
-                    <!-- 498x249 -->
-                    <source srcset="img/intro-img.webp" media="(min-width: 768px)" type="image/webp">
-                    <source srcset="img/intro-img.jpg" media="(min-width: 768px)">
-                    <!-- 460x230 -->
-                    <source srcset="img/intro-img.webp" media="(min-width: 480px)" type="image/webp">
-                    <source srcset="img/intro-img.jpg" media="(min-width: 480px)">
-                    <!-- 610x305 -->
-                    <source srcset="img/intro-img.webp" type="image/webp">
-                    <img src="img/intro-img.jpg" alt="Alt Text" width="450" height="225">
-                  </picture>
-                </div>
+                <figure class="intro__figure">
+                  <div class="embed-responsive  embed-responsive--2-1  intro__img">
+                    <picture>
+                      <source srcset="img/intro-img.webp" media="(min-width: 992px)" type="image/webp">
+                      <source srcset="img/intro-img.jpg" media="(min-width: 992px)">
+                      <!-- 498x249 -->
+                      <source srcset="img/intro-img.webp" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="img/intro-img.jpg" media="(min-width: 768px)">
+                      <!-- 460x230 -->
+                      <source srcset="img/intro-img.webp" media="(min-width: 480px)" type="image/webp">
+                      <source srcset="img/intro-img.jpg" media="(min-width: 480px)">
+                      <!-- 610x305 -->
+                      <source srcset="img/intro-img.webp" type="image/webp">
+                      <img src="img/intro-img.jpg" alt="Alt Text" width="450" height="225">
+                    </picture>
+                  </div>
+                  <figcaption class="intro__fig-caption">We’re Serious About Your Home</figcaption>
+                </figure>
               </div>
             </div>
             <section class="intro__about">
@@ -277,33 +309,56 @@
         </div>
       </main>
     </div>
-    <div class="page__footer-wrapper">
-      <footer class="page-footer" role="contentinfo">
-        <div class="container">
-          <div class="row">
-            <div class="page-footer__copyrights-col">
-              <div class="page-footer__copyrights">
-                © Icon Professional Service Guru. All rights reserved.
-              </div>
-            </div>
-            <div class="page-footer__nav-col">
-              <div class="page-footer__nav" role="navigation">
-                <ol class="page-footer__nav-list  list-nostyled">
-                  <li class="page-footer__nav-item">
-                    <a class="page-footer__nav-link" href="index.html">Home</a>
+    <div class="page__footer-wrapper">      <footer class="page-footer" role="contentinfo">        <div class="container">          <div class="row">            <div class="page-footer__copyrights-col">              <div class="page-footer__copyrights">                © Icon Professional Service Guru. All rights reserved.              </div>            </div>            <div class="page-footer__nav-col">              <div class="page-footer__nav" role="navigation">                <ol class="page-footer__nav-list  list-nostyled">                  <li class="page-footer__nav-item">                    <a class="page-footer__nav-link" href="index.html">Home</a>                  </li>                  <li class="page-footer__nav-item">                    <a class="page-footer__nav-link" href="service.html">Services</a>                  </li>                  <li class="page-footer__nav-item">                    <a class="page-footer__nav-link" href="contacts.html">Contact Us</a>                  </li>                </ol>              </div>            </div>          </div>        </div>      </footer>    </div>
+    <section class="drawer  drawer--left" id="main-nav" data-drawer-target>
+      <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+      <div class="drawer__wrapper">
+        <div class="drawer__header">
+          <h2 class="visually-hidden">Основная навигация сайта</h2>
+          <button class="drawer__close" data-drawer-close aria-label="Закрыть Drawer"></button><span class="drawer__caption">Menu</span>
+        </div>
+        <div class="drawer__content">
+          <nav class="main-nav">
+            <ol class="main-nav__list  list-nostyled">
+              <li class="main-nav__item  main-nav__item--active">
+                <a href="index.html" class="main-nav__link">
+                  Home
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="service.html" class="main-nav__link">
+                   Services
+                </a>
+                <ol class="main-nav__list  main-nav__list--lvl2  list-nostyled">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Air Conditioning & Heating</a>
                   </li>
-                  <li class="page-footer__nav-item">
-                    <a class="page-footer__nav-link" href="service.html">Services</a>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Handyman</a>
                   </li>
-                  <li class="page-footer__nav-item">
-                    <a class="page-footer__nav-link" href="contacts.html">Contact Us</a>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Maid & Cleaning</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Mason, Brick, Pavers and Concrete</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Swimming Pool Repair and Construction</a>
                   </li>
                 </ol>
-              </div>
-            </div>
-          </div>
+              </li>
+              <li class="main-nav__item">
+                <a href="contacts.html" class="main-nav__link">
+                  Contact Us
+                </a>
+              </li>
+            </ol>
+          </nav>
         </div>
-      </footer>
-    </div>
-  </div>  <!-- <script src="js/libs/util.min.js"></script> -->  <script src="js/script.min.js"></script></body>
+      </div>
+    </section>
+  </div>
+  <!-- <script src="js/libs/util.min.js"></script> -->
+  <script src="js/script.min.js"></script>
+</body>
 </html>

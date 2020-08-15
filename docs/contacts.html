@@ -1,9 +1,30 @@
-<!DOCTYPE html>
-<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
-<head>
-  <meta charset="utf-8">
-  <title>Services | IPS Guru</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <meta name="MobileOptimized" content="320">  <meta name="format-detection" content="telephone=no">  <meta name="format-detection" content="date=no">  <meta name="format-detection" content="address=no">  <meta name="format-detection" content="email=no">  <meta name="description" content>  <meta name="keywords" content>  <meta name="robots" content="index,follow">  <!-- OpenGraph microdata  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />  <meta property="og:type"          content="website" />  <meta property="og:title"         content="Your Website Title" />  <meta property="og:description"   content="Your description" />  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />  <meta property="og:locale"        content="uk_UA" />  -->  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Picture element HTML5 shiv    document.createElement("picture");  </script>  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<!DOCTYPE html><html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#"><head>  <meta charset="utf-8">  <title>Services | IPS Guru</title>  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="MobileOptimized" content="320">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="description" content>
+  <meta name="keywords" content>
+  <meta name="robots" content="index,follow">
+  <!-- OpenGraph microdata
+  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+  <meta property="og:locale"        content="uk_UA" />
+  -->
+  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->
+  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/site.webmanifest">
@@ -12,10 +33,10 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
 <meta name="msapplication-config" content="/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head>
-<body>
-  <div class="page__inner">
-    <div class="page__content">
+<meta name="theme-color" content="#ffffff"></head><body>  <div class="page__inner">    <div class="page__content">      <!--DEV
+      Нужно убрать пробел между @-ами:
+      @ @include('blocks/page-header/page-header.html')
+      -->
       <header class="page-header" role="banner">
         <div class="container  page-header__top">
           <ul class="page-header__top-list list-nostyled">
@@ -35,13 +56,16 @@
         </div>
         <div class="page-header__content">
           <div class="page-header__controls">
+            <button id="main-nav-toggler" class="main-nav__toggler  burger" data-caption="Menu" data-drawer-trigger aria-controls="main-nav" aria-expanded="false"><span></span></button>
             <a href="index.html" class="logo" title="IPS Guru">
-              <svg width="57" height="30" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ips-logo"/></svg>
+              <picture>
+                <source srcset="img/ips-logo--mob.png" media="(min-width: 1280px)">
+                <img src="img/ips-logo--mob.png" alt="Логотип" width="177" height="71">
+              </picture>
             </a>
-            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+            <a href="tel:+18884266838" class="btn  page-header__call">Call Us</a>
           </div>
-          <a href="tel:+18884266838" class="btn  page-header__call">Call Us</a>
-          <nav id="main-nav" class="main-nav">
+          <!-- <nav id="main-nav" class="main-nav">
             <ol class="main-nav__list  list-nostyled">
               <li class="main-nav__item  main-nav__item--active">
                 <a href="index.html" class="main-nav__link">
@@ -59,147 +83,13 @@
                 </a>
               </li>
             </ol>
-          </nav>
+          </nav> -->
         </div>
       </header>
-      <main class="main-content" role="main">
-        <div class="container">
-          <h1 class>Contact Icon Professional Service Guru ®</h1>
-          <section class="contacts">
-            <div class="row">
-              <div class="contacts__col-left">
-                <div class="contacts__links">
-                  <div class="embed-responsive  embed-responsive--4-3  contacts__img">
-                    <picture>
-                      <source srcset="img/contacts-img.webp" media="(min-width: 480px)" type="image/webp">
-                      <source srcset="img/contacts-img.jpg" media="(min-width: 480px)">
-                      <source srcset="img/contacts-img.webp" type="image/webp">
-                      <img src="img/contacts-img.jpg" alt="Alt Text" width height>
-                    </picture>
-                  </div>
-                  <dl class="contacts__list">
-                    <div class="contacts__list-inner">
-                      <dt class="contacts__name">Mail:</dt>
-                      <dd class="contacts__value">53 East 34 St. NY, NY 10028</dd>
-                    </div>
-                    <div class="contacts__list-inner">
-                      <dt class="contacts__name">Call:</dt>
-                      <dd class="contacts__value">
-                        <a class="contacts__link" href="tel:+18884266838"><span>1-888-ICON-838</span><span>&nbsp;(</span>1-888-4266-838<span>)</span></a>
-                      </dd>
-                    </div>
-                    <div class="contacts__list-inner">
-                      <dt class="contacts__name">Email:</dt>
-                      <dd class="contacts__value">
-                        <a class="contacts__link" href="mailto:Quote@myiconguru.com">Quote@myiconguru.com</a>
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-              <div class="contacts__col-right">
-                <section class="contacts__form-wrapper">
-                  <h2 class="contacts__title">Contact Us For a Free Quote</h2>
-                  <form class="contacts__form  form" action="/ " method="post">
-                    <div class="contacts__form-group">
-                      <select class="form__select" name="service-item">
-                        <option disabled selected>Choose a service</option>
-                        <option value="Option One">Option One</option>
-                        <option value="Option Two">Option Two</option>
-                        <option value="Option Three">Option Three</option>
-                      </select>
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--half-width">
-                      <input class="form__text-input" type="text" name="name" value placeholder="Name">
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--half-width">
-                      <input class="form__text-input" type="text" name="address" value placeholder="Address">
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--half-width">
-                      <input class="form__text-input" type="text" name="city" value placeholder="City">
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--half-width">
-                      <input class="form__text-input" type="text" name="state" value placeholder="State">
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--half-width">
-                      <input class="form__text-input" type="tel" name="phone" value placeholder="Phone Number">
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--half-width">
-                      <input class="form__text-input" type="email" name="email" value placeholder="Email">
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--half-width">
-                      <select class="form__select" name="service-timeframe">
-                        <option disabled selected>Approx. timeframe</option>
-                        <option value="Option One">Option One</option>
-                        <option value="Option Two">Option Two</option>
-                        <option value="Option Three">Option Three</option>
-                      </select>
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--half-width">
-                      <input class="form__text-input" type="text" name="best-time" value placeholder="Best Time to Call">
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group">
-                      <textarea class="form__textarea" name="description" placeholder="Description"></textarea>
-                      <span class="error"></span>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--radio-wrapper">
-                      <span class="form__label-title">Preferred Method:</span>
-                      <label class="form__label">
-                        <input type="radio" name="preferred-method">
-                        <span class="form__label-name">Phone</span>
-                      </label>
-                      <label class="form__label">
-                        <input type="radio" name="preferred-method" checked>
-                        <span class="form__label-name">Email</span>
-                      </label>
-                    </div>
-                    <div class="contacts__form-group  contacts__form-group--btn-wrapper">
-                      <button class="btn  btn--outline" type="submit">Submit</button>
-                    </div>
-                  </form>
-                </section>
-              </div>
-            </div>
-          </section>
-        </div>
-      </main>
-    </div>
-    <div class="page__footer-wrapper">
-      <footer class="page-footer" role="contentinfo">
-        <div class="container">
-          <div class="row">
-            <div class="page-footer__copyrights-col">
-              <div class="page-footer__copyrights">
-                © Icon Professional Service Guru. All rights reserved.
-              </div>
-            </div>
-            <div class="page-footer__nav-col">
-              <div class="page-footer__nav" role="navigation">
-                <ol class="page-footer__nav-list  list-nostyled">
-                  <li class="page-footer__nav-item">
-                    <a class="page-footer__nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="page-footer__nav-item">
-                    <a class="page-footer__nav-link" href="service.html">Services</a>
-                  </li>
-                  <li class="page-footer__nav-item">
-                    <a class="page-footer__nav-link" href="contacts.html">Contact Us</a>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </div>  <!-- <script src="js/libs/util.min.js"></script> -->  <script src="js/script.min.js"></script></body>
-</html>
+      <main class="main-content" role="main">        <div class="container">          <h1 class>Contact Icon Professional Service Guru ®</h1>          <section class="contacts">            <div class="row">              <div class="contacts__col-left">                <div class="contacts__links">                  <div class="embed-responsive  embed-responsive--4-3  contacts__img">                    <picture>                      <source srcset="img/contacts-img.webp" media="(min-width: 480px)" type="image/webp">                      <source srcset="img/contacts-img.jpg" media="(min-width: 480px)">                      <source srcset="img/contacts-img.webp" type="image/webp">                      <img src="img/contacts-img.jpg" alt="Alt Text" width height>                    </picture>                  </div>                  <dl class="contacts__list">                    <div class="contacts__list-inner">                      <dt class="contacts__name">Mail:</dt>                      <dd class="contacts__value">53 East 34 St. NY, NY 10028</dd>                    </div>                    <div class="contacts__list-inner">                      <dt class="contacts__name">Call:</dt>                      <dd class="contacts__value">                        <a class="contacts__link" href="tel:+18884266838"><span>1-888-ICON-838</span><span>&nbsp;(</span>1-888-4266-838<span>)</span></a>                      </dd>                    </div>                    <div class="contacts__list-inner">                      <dt class="contacts__name">Email:</dt>                      <dd class="contacts__value">                        <a class="contacts__link" href="mailto:Quote@myiconguru.com">Quote@myiconguru.com</a>                      </dd>                    </div>                  </dl>                </div>              </div>              <div class="contacts__col-right">                <section class="contacts__form-wrapper">                  <h2 class="contacts__title">Contact Us For a Free Quote</h2>                  <form class="contacts__form  form" action="/ " method="post">                    <div class="contacts__form-group">                      <select class="form__select" name="service-item">                        <option disabled selected>Choose a service</option>                        <option value="Option One">Option One</option>                        <option value="Option Two">Option Two</option>                        <option value="Option Three">Option Three</option>                      </select>                      <span class="error"></span>                    </div>                    <div class="contacts__form-group  contacts__form-group--half-width">                      <input class="form__text-input" type="text" name="name" value placeholder="Name">                      <span class="error"></span>                    </div>                    <div class="contacts__form-group  contacts__form-group--half-width">                      <input class="form__text-input" type="text" name="address" value placeholder="Address">                      <span class="error"></span>                    </div>                    <div class="contacts__form-group  contacts__form-group--half-width">                      <input class="form__text-input" type="text" name="city" value placeholder="City">                      <span class="error"></span>                    </div>                    <div class="contacts__form-group  contacts__form-group--half-width">                      <input class="form__text-input" type="text" name="state" value placeholder="State">                      <span class="error"></span>                    </div>                    <div class="contacts__form-group  contacts__form-group--half-width">                      <input class="form__text-input" type="tel" name="phone" value placeholder="Phone Number">                      <span class="error"></span>                    </div>                    <div class="contacts__form-group  contacts__form-group--half-width">                      <input class="form__text-input" type="email" name="email" value placeholder="Email">                      <span class="error"></span>                    </div>                    <div class="contacts__form-group  contacts__form-group--half-width">                      <select class="form__select" name="service-timeframe">                        <option disabled selected>Approx. timeframe</option>                        <option value="Option One">Option One</option>                        <option value="Option Two">Option Two</option>                        <option value="Option Three">Option Three</option>                      </select>                      <span class="error"></span>                    </div>                    <div class="contacts__form-group  contacts__form-group--half-width">                      <input class="form__text-input" type="text" name="best-time" value placeholder="Best Time to Call">                      <span class="error"></span>                    </div>                    <div class="contacts__form-group">                      <textarea class="form__textarea" name="description" placeholder="Description"></textarea>                      <span class="error"></span>                    </div>                    <div class="contacts__form-group  contacts__form-group--radio-wrapper">                      <span class="form__label-title">Preferred Method:</span>                      <label class="form__label">                        <input type="radio" name="preferred-method">                        <span class="form__label-name">Phone</span>                      </label>                      <label class="form__label">                        <input type="radio" name="preferred-method" checked>                        <span class="form__label-name">Email</span>                      </label>                    </div>                    <div class="contacts__form-group  contacts__form-group--btn-wrapper">                      <button class="btn  btn--outline" type="submit">Submit</button>                    </div>                  </form>                </section>              </div>            </div>          </section>        </div>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV      Нужно убрать пробел между @-ами:      @ @include('blocks/page-footer/page-footer.html')      -->      <footer class="page-footer" role="contentinfo">        <div class="container">          <div class="row">            <div class="page-footer__copyrights-col">              <div class="page-footer__copyrights">                © Icon Professional Service Guru. All rights reserved.              </div>            </div>            <div class="page-footer__nav-col">              <div class="page-footer__nav" role="navigation">                <ol class="page-footer__nav-list  list-nostyled">                  <li class="page-footer__nav-item">                    <a class="page-footer__nav-link" href="index.html">Home</a>                  </li>                  <li class="page-footer__nav-item">                    <a class="page-footer__nav-link" href="service.html">Services</a>                  </li>                  <li class="page-footer__nav-item">                    <a class="page-footer__nav-link" href="contacts.html">Contact Us</a>                  </li>                </ol>              </div>            </div>          </div>        </div>      </footer>    </div>  </div>  <!--DEV Такой комментарий не попадет в собранный HTML
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
+  -->
+  <!-- <script src="js/libs/util.min.js"></script> -->
+  <script src="js/script.min.js"></script>
+</body></html>
