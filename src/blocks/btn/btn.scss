@@ -24,17 +24,18 @@
   cursor: pointer;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     text-decoration: none;
     color: $white;
-    background-color: #6ad5ff;
-    border-color: #6ad5ff;
+    background-color: $btn-color--hover;
+    border-color: $btn-color--hover;
   }
 
-  &:active {
+  /* &:active {
     background-color: #0035f1;
     border-color: #0035f1;
-  }
+  } */
 
   &--disabled,
   &:disabled {
@@ -62,17 +63,18 @@
     border: 2px solid currentColor;
 
     &:hover,
-    &:focus {
-      color: #6ad5ff;
-      background-color: #fff;
-      border-color: currentColor;
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $second-color;
+      border-color: $second-color;
     }
 
-    &:active {
+    /* &:active {
       color: #0035f1;
       background-color: #fff;
       border-color: currentColor;
-    }
+    } */
 
     &--disabled,
     &:disabled {

@@ -24,21 +24,24 @@
                 <h1 class="intro__title">Manage your home <span class="h3">and all your properties with one company — nationwide!</span></h1>
               </div>
               <div class="intro__col-right">
-                <div class="embed-responsive  embed-responsive--2-1  intro__img">
-                  <picture>
-                    <source srcset="img/intro-img.webp" media="(min-width: 992px)" type="image/webp">
-                    <source srcset="img/intro-img.jpg" media="(min-width: 992px)">
-                    <!-- 498x249 -->
-                    <source srcset="img/intro-img.webp" media="(min-width: 768px)" type="image/webp">
-                    <source srcset="img/intro-img.jpg" media="(min-width: 768px)">
-                    <!-- 460x230 -->
-                    <source srcset="img/intro-img.webp" media="(min-width: 480px)" type="image/webp">
-                    <source srcset="img/intro-img.jpg" media="(min-width: 480px)">
-                    <!-- 610x305 -->
-                    <source srcset="img/intro-img.webp" type="image/webp">
-                    <img src="img/intro-img.jpg" alt="Alt Text" width="450" height="225">
-                  </picture>
-                </div>
+                <figure class="intro__figure">
+                  <div class="embed-responsive  embed-responsive--2-1  intro__img">
+                    <picture>
+                      <source srcset="img/intro-img.webp" media="(min-width: 992px)" type="image/webp">
+                      <source srcset="img/intro-img.jpg" media="(min-width: 992px)">
+                      <!-- 498x249 -->
+                      <source srcset="img/intro-img.webp" media="(min-width: 768px)" type="image/webp">
+                      <source srcset="img/intro-img.jpg" media="(min-width: 768px)">
+                      <!-- 460x230 -->
+                      <source srcset="img/intro-img.webp" media="(min-width: 480px)" type="image/webp">
+                      <source srcset="img/intro-img.jpg" media="(min-width: 480px)">
+                      <!-- 610x305 -->
+                      <source srcset="img/intro-img.webp" type="image/webp">
+                      <img src="img/intro-img.jpg" alt="Alt Text" width="450" height="225">
+                    </picture>
+                  </div>
+                  <figcaption class="intro__fig-caption">We’re Serious About Your Home</figcaption>
+                </figure>
               </div>
             </div>
 
@@ -260,6 +263,8 @@
     <div class="page__footer-wrapper">
       @@include('blocks/page-footer/page-footer.html')
     </div>
+
+    @@include('blocks/drawer/drawer.html')
 
   </div>
 

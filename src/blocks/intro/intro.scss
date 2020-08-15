@@ -52,6 +52,30 @@
     }
   }
 
+  &__figure {
+    margin: 0;
+  }
+
+  &__fig-caption {
+    padding: 8px 25px;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    color: $second-color;
+    background-color: $body-bg;
+
+    @media (min-width: $screen-lg) {
+      padding: 10px 25px;
+      font-size: 1.3em;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 1.75em;
+    }
+  }
+
   &__img {
 
     img {

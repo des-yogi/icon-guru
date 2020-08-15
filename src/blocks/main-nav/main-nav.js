@@ -3,17 +3,17 @@
   // Добавление/удаление модификаторов при клике на переключение видимости
   var toggler = document.getElementById('main-nav-toggler');
   if(toggler){
-    toggler.addEventListener('click', mainNavVisibleToggle);
+    //toggler.addEventListener('click', mainNavVisibleToggle);
 
     function mainNavVisibleToggle(e) {
       e.preventDefault();
-      toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
-      document.getElementById('main-nav').classList.toggle('main-nav--open');
+      //toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
+      //document.getElementById('main-nav').classList.toggle('main-nav--open');
     }
   }
 
   // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
-  var linkClassName = 'main-nav__link';
+/*  var linkClassName = 'main-nav__link';
   var linkClassNameShowChild = 'main-nav__item--show-child';
   var findLinkClassName = new RegExp(linkClassName);
   // Слежение за всплывшим событием focus (нужно добавить класс, показывающий потомков)
@@ -36,12 +36,12 @@
         item.classList.remove(linkClassNameShowChild);
       });
     }
-  }, true);
+  }, true);*/
 
 
 
   // Добавление метода .parents()
-  Element.prototype.parents = function(selector) {
+/*  Element.prototype.parents = function(selector) {
     var elements = [];
     var elem = this;
     var ishaveselector = selector !== undefined;
@@ -57,7 +57,7 @@
     }
 
     return elements;
-  };
+  };*/
 
   // Добавление метода .closest() (полифил, собственно)
   // (function(e){

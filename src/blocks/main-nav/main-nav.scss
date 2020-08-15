@@ -16,16 +16,20 @@ $transition-time:             0.3s !default;
 .main-nav {
   position: relative;
   z-index: 10;
-  padding: 0 15px 0;
-  margin-top: 10px;
-  border-top: 2px solid $border-color;
+  //padding: 0 15px 0;
+  //margin-top: 10px;
+  //background-color: $white;
+  //border-bottom: 2px solid $border-color;
 
   @media (min-width: $screen-md) {
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 0;
-    border: none;
-    margin-right: auto;
+    // position: fixed;
+    // top: 93px;
+    // left: 0;
+    // height: calc(100vh - 93px);
+    // padding: 0 25px;
+    // margin-top: 0;
+    // border: none;
+    // margin-right: auto;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -37,57 +41,61 @@ $transition-time:             0.3s !default;
     padding: 0;
     list-style: none;
 
-    // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
+    &--lvl2 {
+      padding-left: 10px !important;
 
-      // открытие/закрытие меню только в случае работающего JS
-
-      .js & {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
+      #{$block-name}__item {
+        margin-bottom: 0;
       }
 
-      .js #{$block-name}--open & {
-        max-height: 100vh;
-        padding: 15px 0;
-        transition: max-height 0.6s;
-      }
-    }
+      #{$block-name}__link {
+        padding-right: 40px;
+        font-size: 14px;
+        //color: $second-color;
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 5px 10px;
+        background-image: svg-load('../blocks/sprite-svg/svg/right-icon.svg', fill=$title-color);
 
-    // настольный вид списка
-    @media (min-width: $menu-desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
+        &:hover,
+        &:focus {
+          color: $link-color--hover;
+          background-image: svg-load('../blocks/sprite-svg/svg/right-icon.svg', fill=$link-color--hover);
+        }
+      }
     }
   }
 
   &__item {
     position: relative;
+    margin-bottom: 10px;
 
-    @media (min-width: $screen-md) {
-      margin: 0 10px;
-    }
+    // @media (min-width: $screen-md) {
+    //   margin: 0 10px;
+    // }
 
     &--active {
 
       & > #{$block-name}__link {
         color: $second-color;
+        pointer-events: none;
       }
     }
   }
 
   &__link {
     display: block;
-    padding: 0.5em;
+    padding: 0.5em 0;
     text-decoration: none;
     font-size: 20px;
     font-weight: 700;
     color: $title-color;
+    user-select: none;
 
     &:hover,
     &:focus {
       text-decoration: none;
+      color: $second-color;
       // background-color: aquamarine;
     }
 
@@ -95,72 +103,7 @@ $transition-time:             0.3s !default;
       padding-top: 5px;
       padding-bottom: 5px;
     }
-
-    &--lvl-2 {
-
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 1.2em;
-      }
-    }
-
-    &--lvl-3 {
-
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 2.4em;
-      }
-    }
   }
-
-  &__sublist-wrapper {
-
-    &--lvl-2 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-        // stylelint-enable
-      }
-    }
-
-    &--lvl-3 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 100%;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item--lvl-2:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-        // stylelint-enable
-      }
-    }
-  }
-
-
 
   // переключатель
 
@@ -170,13 +113,13 @@ $transition-time:             0.3s !default;
     background: none;
     border: none;
 
-    .no-js & {
-      display: none;
-    }
+    // .no-js & {
+    //   display: none;
+    // }
 
-    @media (min-width: $menu-desktop-width) {
-      display: none;
-    }
+    // @media (min-width: $menu-desktop-width) {
+    //   display: none;
+    // }
   }
 
   &--open {
