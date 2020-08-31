@@ -15,7 +15,7 @@
     display: block;
     content: attr(data-caption);
     position: absolute;
-    left: calc(100% + 15px);
+    left: calc(100% - -15px);
     top: 50%;
     min-width: 47px;
     min-height: 21px;
