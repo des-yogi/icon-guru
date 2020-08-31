@@ -123,9 +123,11 @@
 
   .dropdown-toggle {
     width: 100%;
+    max-width: 100%;
     color: $title-color;
     background-color: $main-color;
     border-color: currentColor;
+    white-space: normal;
 
     @media (min-width: $screen-md) {
       display: none;
