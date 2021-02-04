@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.26.14",
     "const": "^1.0.0",
     "cross-env": "^7.0.2",
     "css-mqpacker": "^7.0.0",
@@ -37,7 +37,7 @@
     "gulp-cleancss": "^0.2.2",
     "gulp-concat": "^2.6.1",
     "gulp-debug": "^4.0.0",
-    "gulp-file-include": "^2.2.2",
+    "gulp-file-include": "^2.3.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
@@ -71,10 +71,13 @@
     "yaspeller": "^7.0.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "blazy": "^1.8.2",
-    "focus-visible": "^5.1.0",
+    "focus-visible": "^5.2.0",
+    "imagesloaded": "^4.1.4",
     "ismobilejs": "^0.5.2",
     "jquery": "^3.5.1",
+    "masonry-layout": "^4.2.2",
     "object-fit-images": "^3.2.4",
     "picturefill": "^3.0.3",
     "svg4everybody": "^2.1.9"
