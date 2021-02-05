@@ -1,0 +1,46 @@
+.masonry-gallery {
+  padding-top: 25px;
+
+  &:first-of-type {
+    padding-top: 40px;
+    border-top: 1px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      padding-top: 50px;
+    }
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .grid-sizer,
+  &__item {
+    @include col(xs, 12);
+    @include col(sm, 6);
+    @include col(lg, 4);
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-sm) {
+      width: 50%;
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 33.33333%;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
