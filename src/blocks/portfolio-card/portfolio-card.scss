@@ -1,0 +1,45 @@
+.portfolio-card {
+  display: block;
+  height: 100%;
+  color: $title-color;
+  border-bottom: 1px solid $border-color;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $second-color;
+  }
+
+  &__wrapper {
+    padding-top: 40px;
+    margin-bottom: -40px;
+    border-top: 1px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      padding-top: 50px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: -50px;
+    }
+  }
+
+  &__img {
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    padding: 15px 0;
+  }
+
+  &__title {
+    margin: 8px 0 0;
+    color: currentColor;
+  }
+}

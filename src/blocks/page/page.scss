@@ -299,6 +299,174 @@ a {
   }
 }
 
+.col-1-2-3 {
+  @include col(xs, 12);
+  @include col(md, 6);
+  @include col(lg, 4);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 50px;
+  }
+}
+
+.main-content {
+
+  &__header,
+  &__add-info {
+    @include col(xs, 12);
+    @include col(md, 6);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    //margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      //max-width: calc(50% - 25px);
+      padding-top: 50px;
+      padding-bottom: 50px;
+      //margin-bottom: 50px;
+    }
+  }
+
+  &__add-info {
+    @include col-offset(xl, 1);
+    @include col(xl, 5);
+    padding-top: 0;
+
+    .h4 {
+      margin-top: 25px;
+
+      @media (min-width: $screen-md) {
+        margin-top: 40px;
+      }
+    }
+
+    a {
+      font-weight: 700;
+      color: $second-color;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__neighbors-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+
+    @media (min-width: $screen-sm) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10px 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: $title-color;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $second-color;
+      }
+
+      @media (min-width: $screen-sm) {
+        width: auto;
+        justify-content: space-between;
+      }
+    }
+
+    a + a {
+      margin-top: 25px;
+
+      @media (min-width: $screen-sm) {
+        margin-top: 0;
+      }
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+
+      &:not(.icon--left) {
+        margin-left: 15px;
+      }
+
+      &--left {
+        transform: scale(-1, 1);
+        margin-right: 15px;
+      }
+    }
+
+    .text {
+      line-height: 1;
+    }
+  }
+}
+
+.date-stamp {
+  display: flex;
+  align-items: center;
+  color: $text-color;
+  font-size: 14px;
+
+  & + & {
+    margin-top: 20px;
+  }
+
+  svg {
+    flex: 0 0;
+    flex-basis: 20px;
+  }
+
+  span {
+    margin-left: 10px;
+    line-height: 1.3;
+  }
+
+  & > span {
+    transform: translateY(1.5px);
+  }
+
+  .location {
+    color: $second-color;
+  }
+}
+
+.fancybox-caption__body {
+  padding: 10px 0;
+  font-size: 14px;
+  color: $white;
+  background-color: rgba($second-color, 0.6);
+}
+.fancybox-button {
+  color: $white;
+  background-color: rgba($second-color, 0.6);
+}
+
 // Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;
 // @include row($grid-gutter-width, 10px, 12px, 16px, 20px, 26px);
 // .row {
